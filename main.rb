@@ -1,9 +1,9 @@
 #!/usr/bin/env ruby
 require "json"
 
-require_relative "./wifi_checker"
-require_relative "./report"
-require_relative "./my_json"
+require_relative "./pi/wifi_checker"
+require_relative "./pi/report"
+require_relative "./pi/my_json"
 
 class Main
   def self.run

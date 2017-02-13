@@ -1,1 +1,8 @@
-*.pstore
+*.js.map
+.DS_Store
+.vscode
+node_modules
+npm-debug.log
+bundle.*.js*
+front_page.*.js*
+verify.*.js*

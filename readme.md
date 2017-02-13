@@ -18,3 +18,6 @@
  0. ???
  0. PROFIT! Seriously though, you should be done at this point.
 
+## The Web Page / UI
+
+TODO: Tell the folks how they can work on the menu.

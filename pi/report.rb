@@ -1,7 +1,9 @@
 require "pstore"
 
+# Takes ["a", "list", "of", "names"] and generates a report.
+# The report is JSON. It is saved onto disk using Ruby's PStore.
 class Report
-  STORAGE = PStore.new("storage.pstore")
+  STORAGE = PStore.new("../storage.pstore")
 
   def self.generate(list_of_strings)
       {
