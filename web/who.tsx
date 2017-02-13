@@ -1,6 +1,7 @@
 import * as React from "react";
 import { render } from "react-dom";
 import { get } from "axios";
+import * as m from "moment";
 
 const CAM_URL = "http://loco.freeshell.org/foxbuild2.jpg";
 const PPL_URL = "http://api.myjson.com/bins/190kzb";
@@ -45,14 +46,42 @@ class Who extends React.Component<{}, State> {
     }
 
     render() {
+        let time: string;
+        if (this.state.last_udated === "never") {
+            time = "never";
+        } else {
+            time = m(new Date(this.state.last_udated)).fromNow();
+        }
         return <div>
-            <h2>LIVE MEMBER LIST</h2>
-            <h3>Updated {this.state.last_udated}</h3>
-            <ul>
-                {this.people()}
-            </ul>
-            <img src={CAM_URL} />
-        </div>;
+            <nav className="pt-navbar pt-dark">
+                <div className="pt-navbar-group pt-align-left" >
+                    <div className="pt-navbar-heading">Fox.Build Member Stats</div>
+                </div>
+                <div className="pt-navbar-group pt-align-right">
+                    <a className="pt-button pt-minimal pt-icon-home" href="//fox.build">
+                        Home
+                        </a>
+                    <a className="pt-button pt-minimal pt-icon-chat" href="//foxbuild.slack.com">
+                        Chat
+                        </a>
+                    <span className="pt-navbar-divider"></span>
+                    <button className="pt-button pt-minimal pt-icon-user"
+                        onClick={() => alert("Ouch!")}></button>
+                </div>
+            </nav>
+            <hr />
+            <div className="flex-row">
+                <div className="flex-col">
+                    <h3>Updated {time}</h3>
+                    <ul>
+                        {this.people()}
+                    </ul>
+                </div>
+                <div className="flex-col">
+                    <img src={CAM_URL} />
+                </div>
+            </div>
+        </div >;
     }
 }
 
