@@ -6,3 +6,4 @@ npm-debug.log
 bundle.*.js*
 front_page.*.js*
 verify.*.js*
+*.pstore
