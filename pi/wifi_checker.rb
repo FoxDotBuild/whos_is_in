@@ -1,3 +1,4 @@
+require "json"
 class WifiChecker
     MEMBER_LIST       = "./directory.json"
     IGNORE_LIST       = "./ignore.json"
@@ -7,7 +8,8 @@ class WifiChecker
     # Runs a wifi scan on the local machine
     # returns an array of strings (names)
     def self.call
-      `nmap 192.168.1.0/24 -sP -oG -`
+      # `nmap 192.168.1.0/24 -sP -oG -`
+      `nmap 192.168.1.0/24 -sL -oG -`
        .split("\n")
        .map{ |x| x[/\(.*?\)/] }
        .map{ |x| (x || "").gsub("(", "").gsub(")", "") }
@@ -20,3 +22,4 @@ class WifiChecker
        .uniq - (MEMBER_DIRECTORY.keys)
     end
 end
+puts WifiChecker.call
