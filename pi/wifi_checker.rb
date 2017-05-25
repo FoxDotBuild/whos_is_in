@@ -17,11 +17,10 @@ class WifiChecker
          .to_a
          .map{|x| x["name"] }
          .reject { |x| !!HIDDEN[x] }
-         .tap{ |x| puts (x - MEMBER_DIRECTORY.keys) }
+         .tap{ |x| /#puts#/ (x - MEMBER_DIRECTORY.keys) }
          .map{ |x| MEMBER_DIRECTORY[x] }
          .compact
          .sort
          .uniq - (MEMBER_DIRECTORY.keys)
     end
 end
-puts WifiChecker.call

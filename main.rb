@@ -12,6 +12,7 @@ class Main
     exit unless `iwgetid -r`.include?("Fox.Build")
 
     list   = WifiChecker.call
+    puts list
     report = Report.generate(list)
 
     MyJson.save(report.to_json)
