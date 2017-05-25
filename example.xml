@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.12 scan initiated Thu May 25 15:45:15 2017 as: nmap -sn -oX - 192.168.1.0/24 -->
+<nmaprun scanner="nmap" args="nmap -sn -oX - 192.168.1.0/24" start="1495745115" startstr="Thu May 25 15:45:15 2017" version="7.12" xmloutputversion="1.04">
+<verbose level="0"/>
+<debugging level="0"/>
+<host><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="192.168.1.1" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<times srtt="231969" rttvar="256279" to="1257085"/>
+</host>
+<host><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="192.168.1.4" addrtype="ipv4"/>
+<hostnames>
+<hostname name="raspberrypi" type="PTR"/>
+</hostnames>
+<times srtt="259546" rttvar="259546" to="1297730"/>
+</host>
+<host><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="192.168.1.108" addrtype="ipv4"/>
+<hostnames>
+<hostname name="ESP_CADA10" type="PTR"/>
+</hostnames>
+<times srtt="321203" rttvar="321203" to="1606015"/>
+</host>
+<host><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="192.168.1.123" addrtype="ipv4"/>
+<hostnames>
+<hostname name="Charless-MBP-2" type="PTR"/>
+</hostnames>
+<times srtt="59077" rttvar="59077" to="295385"/>
+</host>
+<host><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="192.168.1.173" addrtype="ipv4"/>
+<hostnames>
+<hostname name="BRW90004E01D2C8" type="PTR"/>
+</hostnames>
+<times srtt="239748" rttvar="239748" to="1198740"/>
+</host>
+<host><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="192.168.1.177" addrtype="ipv4"/>
+<hostnames>
+<hostname name="unknown000463000599" type="PTR"/>
+</hostnames>
+<times srtt="263985" rttvar="263985" to="1319925"/>
+</host>
+<host><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="192.168.1.183" addrtype="ipv4"/>
+<hostnames>
+<hostname name="Tims-Air-2" type="PTR"/>
+</hostnames>
+<times srtt="193709" rttvar="193709" to="968545"/>
+</host>
+<host><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="192.168.1.185" addrtype="ipv4"/>
+<hostnames>
+<hostname name="rick-X555LAB" type="PTR"/>
+</hostnames>
+<times srtt="571" rttvar="5000" to="100000"/>
+</host>
+<host><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="192.168.1.188" addrtype="ipv4"/>
+<hostnames>
+<hostname name="us02n132" type="PTR"/>
+</hostnames>
+<times srtt="139077" rttvar="139077" to="695385"/>
+</host>
+<host><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="192.168.1.190" addrtype="ipv4"/>
+<hostnames>
+<hostname name="NSTAShane" type="PTR"/>
+</hostnames>
+<times srtt="136768" rttvar="136768" to="683840"/>
+</host>
+<host><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="192.168.1.196" addrtype="ipv4"/>
+<hostnames>
+<hostname name="android-9d5db1afe057d2ef" type="PTR"/>
+</hostnames>
+<times srtt="297200" rttvar="297200" to="1486000"/>
+</host>
+<host><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="192.168.1.203" addrtype="ipv4"/>
+<hostnames>
+<hostname name="CharlesnsiPhone" type="PTR"/>
+</hostnames>
+<times srtt="138529" rttvar="138529" to="692645"/>
+</host>
+<host><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="192.168.1.209" addrtype="ipv4"/>
+<hostnames>
+<hostname name="unknown001D7E40B8D7" type="PTR"/>
+</hostnames>
+<times srtt="48098" rttvar="48098" to="240490"/>
+</host>
+<host><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="192.168.1.226" addrtype="ipv4"/>
+<hostnames>
+<hostname name="Sally-PC" type="PTR"/>
+</hostnames>
+<times srtt="36090" rttvar="37414" to="185746"/>
+</host>
+<host><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="192.168.1.236" addrtype="ipv4"/>
+<hostnames>
+<hostname name="paulmarksiPhone" type="PTR"/>
+</hostnames>
+<times srtt="60125" rttvar="60125" to="300625"/>
+</host>
+<host><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="192.168.1.237" addrtype="ipv4"/>
+<hostnames>
+<hostname name="ESP_16432D" type="PTR"/>
+</hostnames>
+<times srtt="423033" rttvar="423033" to="2115165"/>
+</host>
+<host><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="192.168.1.253" addrtype="ipv4"/>
+<hostnames>
+<hostname name="android-2e010d100ba7e645" type="PTR"/>
+</hostnames>
+<times srtt="1530523" rttvar="1530523" to="7652615"/>
+</host>
+<host><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="192.168.1.254" addrtype="ipv4"/>
+<hostnames>
+<hostname name="homeportal" type="PTR"/>
+</hostnames>
+<times srtt="187954" rttvar="187954" to="939770"/>
+</host>
+<runstats><finished time="1495745143" timestr="Thu May 25 15:45:43 2017" elapsed="27.73" summary="Nmap done at Thu May 25 15:45:43 2017; 256 IP addresses (18 hosts up) scanned in 27.73 seconds" exit="success"/><hosts up="18" down="238" total="256"/>
+</runstats>
+</nmaprun>
