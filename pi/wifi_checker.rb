@@ -12,12 +12,12 @@ class WifiChecker
       # `nmap 192.168.1.0/24 -sP -oG -`
       # BEST REPORT (XML):
       # sudo nmap -sn -oX - 192.168.1.0/24
+        #  .tap{ |x| /#puts#/ (x - MEMBER_DIRECTORY.keys) }
        Nokogiri::XML(`sudo nmap -sn -oX - 192.168.1.0/24`)
          .css("hostname")
          .to_a
          .map{|x| x["name"] }
          .reject { |x| !!HIDDEN[x] }
-         .tap{ |x| /#puts#/ (x - MEMBER_DIRECTORY.keys) }
          .map{ |x| MEMBER_DIRECTORY[x] }
          .compact
          .sort
