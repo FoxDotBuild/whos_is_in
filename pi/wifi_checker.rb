@@ -17,6 +17,7 @@ class WifiChecker
          .css("hostname")
          .to_a
          .map{|x| x["name"] }
+         .tap{|x| puts x.join("\n")}
          .reject { |x| !!HIDDEN[x] }
          .map{ |x| MEMBER_DIRECTORY[x] }
          .compact
