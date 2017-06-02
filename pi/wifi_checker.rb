@@ -19,6 +19,7 @@ class WifiChecker
          .map{|x| x["name"] }
          .tap{|x| puts x.join("\n")}
          .reject { |x| !!HIDDEN[x] }
+         .tap{|x| puts x}
          .map{ |x| MEMBER_DIRECTORY[x] }
          .compact
          .sort
