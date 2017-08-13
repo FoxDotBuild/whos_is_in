@@ -1,11 +1,21 @@
-puts `nmap 192.168.1.0/24 -sL -oG -`
-       .split("\n")
-       .map{ |x| x[/\(.*?\)/] }
-       .map{ |x| (x || "").gsub("(", "").gsub(")", "") }
-       .compact
-       .reject { |x| !!HIDDEN[x] }
-       .tap{ |x| /#puts#/ (x - MEMBER_DIRECTORY.keys) }
-       .map{ |x| MEMBER_DIRECTORY[x] }
-       .compact
-       .sort
-       .uniq - (MEMBER_DIRECTORY.keys)
+require "pry"
+require "nokogiri"
+require "json"
+
+MEMBER_LIST       = "./directory.json"
+IGNORE_LIST       = "./ignore.json"
+MEMBER_DIRECTORY  = JSON.parse(File.read(MEMBER_LIST))
+HIDDEN            = JSON.parse(File.read(IGNORE_LIST))
+
+Nokogiri::HTML(`curl 192.168.1.254`)
+  .css("table")
+  .css("tr")
+  .to_a
+  .map(&:to_s)
+  .map    { |x| Nokogiri::XML(x) }
+  .map    { |x| [x.css("td:nth-child(1)").text, x.css("td:nth-child(2)").text]}
+  .select { |x| x.last === "Active" }
+  .map    { |x| x.first }
+  .map    { |x| MEMBER_DIRECTORY[x] }
+  .compact
+  .uniq
